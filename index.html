@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pl-PL" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="W naszej Restauracji poczujesz się jak w sercu Dublina. 
+                                Specjalnością lokalu będą dania z grilla, wyśmienite burgery, steki, 
+                                skrzydełka z kurczaka oraz żeberka do których będziecie mogli napić się irlandzkiego piwa GUINNESS.">
+    <meta name="theme-color" content="#fff">
+
+    <meta property="og:url" content="https://the-dublin-inn.github.io/dublin-inn/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Dublin Inn">
+    <meta property="og:site_name" content="The Dublin Inn">
+    <meta property="og:description"
+        content="W naszej Restauracji poczujesz się jak w sercu Dublina. Specjalnością lokalu będą dania z grilla, wyśmienite burgery, steki, skrzydełka z kurczaka oraz żeberka do których będziecie mogli napić się irlandzkiego piwa GUINNESS.">
+    <meta property="og:image" content="assets/images/dublin-inn-logo.webp">
+    <meta property="og:image:alt" content="Logo The Dublin Inn">
+    <meta property="og:locale" content="pl_PL">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-icon-180.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+    <link rel="prefetch" href="service-worker.js" as="script">
+    <link rel="prefetch" href="src/css/menu.css" as="style">
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/menu.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+
+    <title>The Dublin Inn</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__navbar">
+            <div class="nav__logo">
+                <a href="#home">The Dublin Inn</a>
+            </div>
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a href="#about-us" class="nav__link">O nas</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#menu" class="nav__link">Menu</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#gallery" class="nav__link">Galeria</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#find-us" class="nav__link">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <main>
+            <div class="home" id="home">
+                <img src="assets/images/logo-black.png" width="" height="" alt="Logo restauracji The Dublin Inn"
+                    class="home__logo">
+            </div>
+
+            <section class="about-us" id="about-us">
+                <img src="assets/images/dublin-inn-logo.webp" width="" height="" alt="Wnętrze restauracji">
+                <div>
+                    <h1>O nas</h1>
+                    <p class="about__desc">
+                        W naszej Restauracji poczujesz się jak w sercu Dublina.
+                        Specjalnością lokalu będą dania z grilla, wyśmienite burgery, steki,
+                        skrzydełka z kurczaka oraz żeberka do których będziecie mogli napić się irlandzkiego piwa
+                        Guinness.
+                    </p>
+                </div>
+            </section>
+
+            <section class="menu" id="menu">
+                <div class="gallery-links">
+                    <a href="https://www.facebook.com/The-Dublin-Inn-Grill-Bar-Coffee-480580732465643" target="_blank"
+                        rel="noopener noreferrer">
+                        Znajdź nas <i class="fab fa-facebook-square"></i>
+                    </a>
+
+                    <a href="menu.html" rel="noopener noreferrer">
+                        Menu <i class="fas fa-hamburger"></i>
+                    </a>
+
+                    <a href="https://www.pyszne.pl/menu/the-dublin-inn" target="_blank" rel="noopener noreferrer">
+                        Złóż zamówienie <i class="fas fa-utensils"></i>
+                    </a>
+                </div>
+
+                <h1>Galeria</h1>
+                <div class="gallery" id="gallery">
+                    <div class="gallery-container wi-3 hi-2">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img src="assets/images/burger-showcase.webp" width="" height="" alt="Burger">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-container wi-3 hi-3">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img src="assets/images/meat1.webp" width="" height="" alt="Mięso">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-container hi-2">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img src="assets/images/leprechaun-phone-box.webp" width="" height=""
+                                    alt="Leprechaun przy budce telefonicznej">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-container wi-2">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img src="assets/images/meat2.webp" width="" height="" alt="Mięso">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-container wi-4 hi-1">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img src="assets/images/poster.webp" width="" height="" alt="Plakat">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img src="assets/images/beer.webp" width="" height=""
+                                    alt="Piwo Koźlak (Pszeniczne) z browaru w Szreniawie">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="map" id="find-us">
+                <h1>Znajdź nas</h1>
+                <div class="embed-responsive" id="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.8059882600764!2d16.81093515143041!3d52.33766565737903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47044f96e727337d%3A0xb65ac3e1421e2e84!2sThe%20Dublin%20Inn%20Grill%20Bar%20%26%20Coffee!5e0!3m2!1spl!2spl!4v1607690098349!5m2!1spl!2spl"
+                        class="map" width="800" height="600" frameborder="0" style="border:1;" title="Google Maps"
+                        aria-hidden="false" tabindex="0" alt="Położenie restauracji - Mapy google">
+                    </iframe>
+                </div>
+            </section>
+
+            <section class="contact" id="contact-us">
+                <h1>Skontaktuj się z nami</h1>
+                <div class="contact__inner">
+                    <div class="contact__phone">
+                        <h3 class="contact__header">Adres</h3>
+                        <div class="contact__info--wrapper">
+                            <a href="tel: +48-601-858-242" class="contact__button">
+                                <span>Zadzwoń teraz</span>
+                            </a>
+                        </div>
+                        <span><i class="fas fa-phone"></i> 601 858 242</span>
+                    </div>
+
+                    <div class="contact__geo">
+                        <h3 class="contact__header">Kontakt</h3>
+                        <div class="contact__info--wrapper">
+                            <a href="#" target="_blank" rel="noopener noreferrer" id="locate-bttn"
+                                class="contact__button contact__button--disabled">
+                                <span>Wyznacz trasę</span>
+                            </a>
+                            <p class="contact__geolocation"></p>
+                        </div>
+                        <span><i class="fas fa-map-marker-alt"></i> ul. Poznańska 48</span>
+                        <span><i class="fas fa-city"></i> 62-052, Komorniki</span>
+                    </div>
+
+                    <div class="contact__schedule">
+                        <h3 class="contact__header">Otwarte</h3>
+                        <span><i class="fas fa-clock"></i> Pon: <strong>zamknięte</strong></span>
+                        <span>Wt - czw: 13:00 - 00:00</span>
+                        <span>Pt - sob: 13:00 - 00:00</span>
+                        <span>Ndz: 13:00 - 20:00</span>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>The Dublin Inn &copy; 2020 |
+            <a href="https://github.com/jkbkupczyk" target="_blank" rel="noopener noreferrer">Jakub Kupczyk</a>
+        </p>
+    </footer>
+
+    <script src="src/js/locator.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+    <script src="src/js/app.js"></script>
+</body>
+
+</html>
