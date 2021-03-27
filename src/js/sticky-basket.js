@@ -6,4 +6,4 @@ document.addEventListener("DOMContentLoaded", () => {
             elem.classList.add("categories__basket--sticky") :
             elem.classList.remove("categories__basket--sticky")
     });
-})
+});

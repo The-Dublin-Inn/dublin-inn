@@ -35,3 +35,4 @@ self.addEventListener("fetch", (event) => {
 
 // only dev - new version of app is registered ↓
 //self.caches.delete("cache-v1");
+caches.delete('cache-v1');
