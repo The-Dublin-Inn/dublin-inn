@@ -1,13 +1,9 @@
-// DOM Elems
 const locateBttn = document.getElementById("locate-bttn");
 const geoInfo = document.querySelector(".contact__geolocation");
 
-navigator.permissions.query({ name: 'geolocation' })
-    .then(p => {
-        p.addEventListener("change", () => {
-            navigator.geolocation.getCurrentPosition(success, error);
-        })
-    });
+locateBttn.addEventListener("click", () => {
+    navigator.geolocation.getCurrentPosition(success, error);
+});
 
 const success = (position) => {
     const GLOBE_WIDTH = 256;
@@ -22,19 +18,12 @@ const success = (position) => {
 
     const zoom = Math.round(Math.log(256 * 360 / angle / GLOBE_WIDTH) / Math.LN2);
 
-    // www.google.com/maps/dir/${lon},${lat}/52.3376624,16.8131292/@52.3677898,16.8126858,16z/data=!4m2!4m1!3e0?hl=pl
+    // www.google.com/maps/dir/${latitude},${longitude}/52.3376624,16.8131292/@52.3677898,16.8126858,${zoomLevel}z/data=!4m2!4m1!3e0?hl=pl
     const locateUrl = `https://www.google.com/maps/dir/${position.coords.latitude},${position.coords.longitude}/52.3376624,16.8131292/@52.3677898,16.8126858,${zoom}z/data=!4m2!4m1!3e0?hl=pl`;
 
-    locateBttn.setAttribute("href", locateUrl);
-    locateBttn.classList.remove("contact__button--disabled");
-    geoInfo.innerText = "*lokalizacja może się różnić\n w zależności od urządzenia";
+    window.open(locateUrl, '_blank');
 }
 
 const error = () => {
-    locateBttn.classList.add("contact__button--disabled");
     geoInfo.innerText = "*by wyznaczyć trasę\n włącz geolokalizacje";
 }
-
-const getLocal = (() => {
-    navigator.geolocation.getCurrentPosition(success, error);
-})();

@@ -9,35 +9,433 @@
                                 Specjalnością lokalu będą dania z grilla, wyśmienite burgery, steki, 
                                 skrzydełka z kurczaka oraz żeberka do których będziecie mogli napić się irlandzkiego piwa GUINNESS.">
     <meta name="theme-color" content="#fff">
-    <meta property="og:title" content="The Dublin Inn">
+
+    <meta property="og:url" content="https://the-dublin-inn.github.io/dublin-inn/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:locale" content="pl_PL">
-    <meta property="og:image" content="images/restaurant.jpg">
+    <meta property="og:title" content="The Dublin Inn">
     <meta property="og:site_name" content="The Dublin Inn">
+    <meta property="og:description"
+        content="W naszej Restauracji poczujesz się jak w sercu Dublina. Specjalnością lokalu będą dania z grilla, wyśmienite burgery, steki, skrzydełka z kurczaka oraz żeberka do których będziecie mogli napić się irlandzkiego piwa GUINNESS.">
+    <meta property="og:image" content="assets/images/dublin-inn-logo.webp">
+    <meta property="og:image:alt" content="Logo The Dublin Inn">
+    <meta property="og:locale" content="pl_PL">
 
     <link rel="shortcut icon" href="favicon.png" type="image/png">
-    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icons/apple-icon-180.png">
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
-    <link rel="preload" href="assets/fonts/Uni_Sans_Thin.otf">
-    <link rel="preload" as="style" href="src/css/style.css">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="prefetch" href="src/js/sticky-basket.js" as="script" crossorigin="anonymous">
+    <link rel="preload" href="assets/fonts/Uni_Sans_Thin.otf" as="font" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="src/css/fade-in.css">
 
     <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
 
-    <title>Menu | The Dublin Inn</title>
+    <title>Menu | Grill, Bar & Coffee</title>
 </head>
 
 <body>
-
     <div class="wrapper">
+        <div class="go-back">
+            <a href="index.html" class="go-back-link">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+
+        <header class="menu__header">
+            <h1>Nasze Menu</h1>
+        </header>
+
+        <main class="menu__container">
+            <div class="menu__categories">
+                <div class="category" id="burgery">
+                    <h3 class="category__header">Burgery</h3>
+                    <ul class="category__list">
+                        <li class="category__product">
+                            <div class="category__wrapper">
+                                <h4>City Centre</h4>
+                                <span>pomidor, cebula, relish pomidorowy, batawia</span>
+                                <span class="product__price">17,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Dawson</h4>
+                                <span>harrisa, maasdam ser, domowe pikle, rukola</span>
+                                <span class="product__price">22,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Clontarf</h4>
+                                <span>brzoskwinia, curry relish, emmentaler ser, batawia</span>
+                                <span class="product__price">23,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Donnybrook</h4>
+                                <span>ser pleśniowy, marmolada z czerwonej cebuli, rukola</span>
+                                <span class="product__price">24,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Raheny</h4>
+                                <span>whisky, ananas grillowany, ser wędzony, sos chipotle chilli, rukola</span>
+                                <span class="product__price">24,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Rathgar</h4>
+                                <span>piklowana musztarda, emmentaler ser, chrupiące krążki cebuli, piri piri,
+                                    batawia</span>
+                                <span class="product__price">25,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Cabra</h4>
+                                <span>jajko, 2 bekony, relish pomidorowy & batawia</span>
+                                <span class="product__price">27,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Inchicore</h4>
+                                <span>3 plastry bekonu, relish pomidorowy, batawia</span>
+                                <span class="product__price">27,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Portobello</h4>
+                                <span>grillowana pieczarka, masło czosnkowe, relish & batawia</span>
+                                <span class="product__price">23,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Dundrum</h4>
+                                <span>brie, 2 bekony, relish pomidorowy & batawia</span>
+                                <span class="product__price">25,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Blanch</h4>
+                                <span>tajski zielony sos, świeże chilli i kolendra, sałata batawia</span>
+                                <span class="product__price">24,70 zł</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category" id="grill-pizza">
+                    <h3 class="category__header">Grill Pizza</h3>
+                    <ul class="category__list">
+                        <li class="category__product">
+                            <div>
+                                <h4>The Spire</h4>
+                                <span>sos pomidorowy, ser mozzarella, świeże oregano</span>
+                                <span class="product__price">20,20 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>O'Connell</h4>
+                                <span>ser mozzarella i ser pleśniowy, marmolada z czerwonej cebuli, rukola</span>
+                                <span class="product__price">23,20 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Grafton</h4>
+                                <span>ser mozzarella, szynka parmeńska, smażona cebula, przyprawa piri piri</span>
+                                <span class="product__price">25,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Phoenix</h4>
+                                <span>ser mozzarella, ser wędzony, domowe chorizo, oregano, różowy pieprz,
+                                    jalapeno</span>
+                                <span class="product__price">28,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Liffey (Vege)</h4>
+                                <span>sos pomidorowy, świeży szpinak, pieczarki, olej sezamowy</span>
+                                <span class="product__price">25,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Ballymun</h4>
+                                <span>z sosem pomidorowym, serem mozarella, kiełbasą chłopską, świeżą cebulą, wędzonym
+                                    serem i oregano</span>
+                                <span class="product__price">29,00 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Temple</h4>
+                                <span>ser mozzarella, pieczarki, jajko, szynka parmeńska, pietruszka</span>
+                                <span class="product__price">26,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Dodatki do pizzy</h4>
+                                <span>dodatki do pizzy: rukola, szpinak, ser mozzarella, szynka parmeńska, kapary,
+                                    smażona cebula, łosoś wędzony, marmolada z czerwonej cebuli, grilowane
+                                    pieczarki</span>
+                                <span class="product__price">2,50 zł</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category" id="dania-miesne">
+                    <h3 class="category__header">Dania Mięsne</h3>
+                    <ul class="category__list">
+                        <li class="category__product">
+                            <div>
+                                <h4>Chicken Wings, 6 szt.</h4>
+                                <span>skrzydełka z kurczaka w sosie: sezamowo-miodowym, BBQ, harrisa</span>
+                                <span class="product__price">11,60 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Chicken Wings, 12 szt.</h4>
+                                <span>skrzydełka z kurczaka w sosie: sezamowo-miodowym, BBQ, harrisa</span>
+                                <span class="product__price">21,60 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Żeberka Fiachra (tylko w weekendy)</h4>
+                                <span>żeberka BBQ 400 g, Coleslaw, Frytki</span>
+                                <span class="product__price">30,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Fillet Steak</h4>
+                                <span>stek z polędwicy woł. 230 g, zielona sałata, frytki</span>
+                                <span class="product__price">55,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Irish Fish & Chips</h4>
+                                <span>tradycyjna ryba po irlandzku z frytkami, surówka Coleslaw</span>
+                                <span class="product__price">25,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Tatar - Raw Beaf</h4>
+                                <span>tatar z polędwicy wołowej 150 g </span>
+                                <span class="product__price">28,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Big Salad</h4>
+                                <span>grillowana sałata rzymska, ogórek zielony, pomidor, pestki dyni, nasiona
+                                    słonecznika, ranch dressing</span>
+                                <span class="product__price">21,70 zł</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category" id="zupa-dnia">
+                    <h3 class="category__header">Zupy</h3>
+                    <ul class="category__list">
+                        <li class="category__product">
+                            <div>
+                                <h4>Zupa Dnia</h4>
+                                <span>Codziennie inna zupa</span>
+                                <span class="product__price">8,70 zł</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category" id="dla-dzieci">
+                    <h3 class="category__header">Dla Dzieci</h3>
+                    <ul class="category__list">
+                        <li class="category__product">
+                            <div>
+                                <h4>Kids Burger</h4>
+                                <span>100g burgera, serem, ketchupem i frytkami</span>
+                                <span class="product__price">12,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Crispy Chicken</h4>
+                                <span>chrupiące fileciki z kurczaka z frytkami</span>
+                                <span class="product__price">12,70 zł</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category" id="desery">
+                    <h3 class="category__header">Desery</h3>
+                    <ul class="category__list">
+                        <li class="category__product">
+                            <div>
+                                <h4>Deser tygodnia</h4>
+                                <span>Zapytaj o deser</span>
+                                <span class="product__price">8,50 zł</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category" id="napoje">
+                    <h3 class="category__header">Napoje</h3>
+                    <ul class="category__list">
+                        <li class="category__product">
+                            <div>
+                                <h4>Domowe Lemoniady, 500ml</h4>
+                                <ul class="category__list--sub">
+                                    <li class="product__sub">
+                                        <span>cytrynowa</span>
+                                        <span></span>
+                                    </li>
+                                    <li class="product__sub">
+                                        <span>limonkowa</span>
+                                        <span></span>
+                                    </li>
+                                    <li class="product__sub">
+                                        <span>cytrynowo-limonkowa</span>
+                                        <span></span>
+                                    </li>
+                                    <li class="product__sub">
+                                        <span>cytrynowo-imbirowa</span>
+                                        <span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        <li class="category__product">
+                            <div>
+                                <h4>Inne</h4>
+                                <ul class="category__list--sub">
+                                    <li class="product__sub">
+                                        <span>woda gazowana, 0.33</span>
+                                        <span></span>
+                                    </li>
+                                    <li class="product__sub">
+                                        <span>woda niegazowana, 0.33</span>
+                                        <span></span>  
+                                    </li>
+                                    <li class="product__sub">
+                                        <span>coca cola, 0.33</span>
+                                        <span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category" id="dodatki">
+                    <h3 class="category__header">Dodatki</h3>
+                    <ul class="category__list">
+                        <li class="category__product">
+                            <div>
+                                <h4>The Dublin Inn Fries</h4>
+                                <span>Frytki według receptury The Dublin Inn</span>
+                                <span class="product__price">8,20 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Frytki z batatów</h4>
+                                <span class="product__price">9,20 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Chrupiące Krążki Cebulowe</h4>
+                                <span class="product__price">7,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Surówka</h4>
+                                <span class="product__price">5,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Zielona Sałata</h4>
+                                <span class="product__price">4,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Domowe Pikle</h4>
+                                <span class="product__price">4,70 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Jeden sos</h4>
+                                <span>Jeden z sosów: czosnkowy ranch, zielony tajski lub piklowana musztarda</span>
+                                <span class="product__price">2,00 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Zestaw 3 sosów</h4>
+                                <span>sos czosnkowy ranch, sos zielony tajski i sos piklowana musztarda</span>
+                                <span class="product__price">5,00 zł</span>
+                            </div>
+                        </li>
+                        <li class="category__product">
+                            <div>
+                                <h4>Ketchup</h4>
+                                <span class="product__price">0,50 zł</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="basket__wrapper">
+                <div class="basket" id="basket">
+                    <header class="basket__header">
+                        <h4>Kategorie</h1>
+                    </header>
+
+                    <div class="list__wrapper">
+                        <ul class="basket__categories">
+                            <li><a href="#burgery">Burgery</a></li>
+                            <li><a href="#grill-pizza">Grill Pizza</a></li>
+                            <li><a href="#dania-miesne">Dania Miesne</a></li>
+                            <li><a href="#zupa-dnia">Zupa Dnia</a></li>
+                            <li><a href="#dla-dzieci">Dla Dzieci</a></li>
+                            <li><a href="#desery">Desery</a></li>
+                            <li><a href="#napoje">Napoje</a></li>
+                            <li><a href="#dodatki">Dodatki</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+
         <footer>
             <p>The Dublin Inn &copy; 2020 |
                 <a href="https://github.com/jkbkupczyk" target="_blank" rel="noopener noreferrer">Jakub Kupczyk</a>
             </p>
         </footer>
     </div>
+
+    <script src="src/js/sticky-basket.js"></script>
 </body>
 
 </html>
