@@ -8,10 +8,19 @@
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.9);
     --headerFont: Beyond;
     --navbarHeight: 50px;
+    --bttnDarkerGreen: #2E7D32;
 }
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
 }
 
 html {
@@ -21,6 +30,7 @@ html {
 }
 
 body {
+    height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 500;
     font-size: 1.15rem;
@@ -45,6 +55,15 @@ img {
     -ms-user-select: none;
 }
 
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 ul li {
     list-style-type: none;
 }
@@ -62,6 +81,7 @@ ul li {
 .nav__navbar {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
     align-items: center;
@@ -96,7 +116,26 @@ ul li {
     text-decoration: none;
 }
 
-main {
+.nav__label {
+    cursor: pointer;
+    display: none;
+    margin: 0 1.5rem;
+}
+
+.nav__burger {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav__links {
+    display: block;
+    margin: 0 1.5rem;
+}
+
+#menu-toggle:checked ~ label i {
+    transform: rotate(90deg);
+}
+
+main, .home {
     animation: fade-in 2000ms;
     -webkit-animation: fade-in 2000ms;
     -moz-animation: fade-in 2000ms;
@@ -141,18 +180,18 @@ main {
 }
 
 .home {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-bottom: 0;
-    height: 85vh;
-}
-
-.home__logo {
-    width: 400px;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+    min-width: 100%;
+    padding: 0;
+    margin: 0 auto;
     box-shadow: none;
-    object-fit: contain;
-    transition: 250ms ease-in;
+    background-image: url('../../assets/bckgr.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 125ms ease-in;
 }
 
 .wrapper, .about-us, .menu, .gallery, .map {
@@ -164,6 +203,8 @@ main {
     flex-flow: column wrap;
     justify-content: center;
     text-align: center;
+    margin: 0 auto;
+    padding: 0;
 }
 
 h1 {
@@ -213,7 +254,7 @@ h1 {
     background-color: #2196F3;
     color: #ffffff;
     border-radius: 5px;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 0;
     transition: 250ms ease-in;
 }
 
@@ -341,11 +382,8 @@ span, i {
 }
 
 footer {
-    margin-top: 5rem;
-}
-
-footer p {
-    margin: 1rem;
+    margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Gallery grid */
@@ -419,17 +457,20 @@ footer p {
 
 @media screen and (max-width: 795px) {
     .nav__links {
+        display: none;
         flex-direction: column;
+        justify-content: left;
+        text-align: left;
+    }
+    .nav__label {
+        display: block;
     }
     .nav__item{
         margin: 0.5rem 0;
     }
-    .home__logo {
-        width: 75%;
-    }
     .about-us {
         grid-template-columns: 1fr;
-        padding: 1rem;
+        padding: 0;
         margin: 0.5rem;
     }
     .map {
@@ -446,5 +487,12 @@ footer p {
     }
     .wi-1, .wi-2, .wi-3, .wi-4, .wi-5, .wi-6 {
         grid-column: span 1;
+    }
+}
+
+@media screen and (min-width: 795px) {
+    .nav__links {
+        display: flex;
+        flex-direction: row;
     }
 }
