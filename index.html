@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="The Dublin Inn">
     <meta property="og:description"
         content="W naszej Restauracji poczujesz się jak w sercu Dublina. Specjalnością lokalu będą dania z grilla, wyśmienite burgery, steki, skrzydełka z kurczaka oraz żeberka do których będziecie mogli napić się irlandzkiego piwa GUINNESS.">
-    <meta property="og:image" content="assets/images/dublin-inn-logo.webp">
+    <meta property="og:image" content="assets/bckgr.jpeg">
     <meta property="og:image:alt" content="Logo The Dublin Inn">
     <meta property="og:locale" content="pl_PL">
 
@@ -41,7 +41,22 @@
             <div class="nav__logo">
                 <a href="#home">The Dublin Inn</a>
             </div>
-            <ul class="nav__links">
+
+            <label for="menu-toggle" class="nav__label">
+                <svg
+                    class="fill-current text-gray-900"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                >
+                    <title>menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </label>
+            <input class="nav__burger" type="checkbox" id="menu-toggle" />
+
+            <ul class="nav__links noselect">
                 <li class="nav__item">
                     <a href="#about-us" class="nav__link">O nas</a>
                 </li>
@@ -58,13 +73,10 @@
         </div>
     </nav>
 
+    <div class="home" id="home"></div>
+
     <div class="wrapper">
         <main>
-            <div class="home" id="home">
-                <img src="assets/images/logo-black.png" width="" height="" alt="Logo restauracji The Dublin Inn"
-                    class="home__logo">
-            </div>
-
             <section class="about-us" id="about-us">
                 <img src="assets/images/dublin-inn-logo.webp" width="" height="" alt="Wnętrze restauracji">
                 <div>
@@ -200,9 +212,8 @@
     </div>
 
     <footer>
-        <p>The Dublin Inn &copy; 2020 |
-            <a href="https://github.com/jkbkupczyk" target="_blank" rel="noopener noreferrer">Jakub Kupczyk</a>
-        </p>
+        The Dublin Inn &copy; 2020 |
+        <a href="https://github.com/jkbkupczyk" target="_blank" rel="noopener noreferrer">Jakub Kupczyk</a>
     </footer>
 
     <script src="src/js/locator.js"></script>
