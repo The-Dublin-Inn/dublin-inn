@@ -10,6 +10,8 @@
     --primary-blue: #2196F3;
     --shade-hover-light: #2196F3;
     --shade-hover-darker: #0e5a99;
+    --bttnDarkerGreen: #2E7D32;
+    --bttnGreen: #388E3C;
 }
 
 html {
@@ -43,14 +45,14 @@ body {
 .go-back-link {
     border-radius: 50%;
     color: var(--shade-light);
-    background-color: var(--shade-hover-light);
+    background-color: var(--bttnGreen);
     padding: 0.25rem;
     margin: 1rem;
     transition: all 400ms ease-in-out;
 }
 
 .go-back-link:hover {
-    color: var(--shade-hover-light);
+    color: var(--bttnGreen);
     background-color: var(--shade-light);
 }
 
@@ -118,7 +120,7 @@ ul, li {
 .product__price {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--primary-blue);
+    color: var(--bttnGreen);
     padding: 0.5rem 0 0 0.5rem;
 }
 
@@ -189,7 +191,7 @@ ul, li {
     text-transform: uppercase;
     font-size: 1.12rem;
     font-weight: 600;
-    background-color: #2196F3;
+    background-color: var(--bttnGreen);
     color: #ffffff;
     border-radius: 5px;
     padding: 0.75rem 1.25rem;
@@ -197,7 +199,7 @@ ul, li {
 }
 
 .basket__order a:hover {
-    background-color: #1476c7;
+    background-color: var(--bttnDarkerGreen);
     color: #fafafa;
 }
 

@@ -9,6 +9,7 @@
     --headerFont: Beyond;
     --navbarHeight: 50px;
     --bttnDarkerGreen: #2E7D32;
+    --bttnGreen: #388E3C;
 }
 
 * {
@@ -17,21 +18,10 @@
     margin: 0;
 }
 
-html, body {
-    margin:0;
-    padding:0;
-    overflow-x:hidden;
-}
-
-html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    color: black;
-}
-
 body {
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
     font-weight: 500;
     font-size: 1.15rem;
     margin: 0 auto;
@@ -43,7 +33,7 @@ a {
 }
 
 a:hover {
-    color: #2196F3;
+    color: var(--bttnGreen);
 }
 
 img {
@@ -180,17 +170,14 @@ main, .home {
 }
 
 .home {
-    overflow-x: hidden;
     height: 100vh;
     width: 100%;
-    min-width: 100%;
-    padding: 0;
-    margin: 0 auto;
+    overflow: hidden;
     box-shadow: none;
-    background-image: url('../../assets/bckgr.webp');
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('../../assets/bckgr.webp');
+    background-position: center center;
     background-size: cover;
+    object-fit: cover;
     transition: 125ms ease-in;
 }
 
@@ -251,15 +238,15 @@ h1 {
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 600;
-    background-color: #2196F3;
+    background-color: var(--bttnGreen);
     color: #ffffff;
     border-radius: 5px;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 0.75rem;
     transition: 250ms ease-in;
 }
 
 .gallery-links a:hover {
-    background-color: #1476c7;
+    background-color: var(--bttnDarkerGreen);
     color: #fafafa;
 }
 
@@ -356,7 +343,7 @@ span, i {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 600;
-    background-color: #2196F3;
+    background-color: var(--bttnGreen);
     color: #ffffff;
     border-radius: 5px;
     padding: 0.75rem 1.25rem;
@@ -364,7 +351,7 @@ span, i {
 }
 
 .contact__button:hover {
-    background-color: #1476c7;
+    background-color: var(--bttnDarkerGreen);
     color: #fafafa;
 }
 
