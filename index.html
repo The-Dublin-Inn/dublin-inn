@@ -73,10 +73,10 @@
         </div>
     </nav>
 
-    <div class="home" id="home"></div>
-
     <div class="wrapper">
         <main>
+            <div class="home" id="home"></div>
+
             <section class="about-us" id="about-us">
                 <img src="assets/images/dublin-inn-logo.webp" width="" height="" alt="Wnętrze restauracji">
                 <div>
@@ -200,8 +200,9 @@
 
                     <div class="contact__schedule">
                         <h3 class="contact__header">Otwarte</h3>
+                        <span id="calendar">Dzisiaj&nbsp;</span>
                         <span><i class="fas fa-clock"></i> Pon: <strong>zamknięte</strong></span>
-                        <span>Wt - czw: 13:00 - 00:00</span>
+                        <span>Wt - czw: 13:00 - 21:00</span>
                         <span>Pt - sob: 13:00 - 00:00</span>
                         <span>Ndz: 13:00 - 20:00</span>
                     </div>
@@ -217,6 +218,7 @@
     </footer>
 
     <script src="src/js/locator.js"></script>
+    <script src="src/js/calendar.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register("service-worker.js");
